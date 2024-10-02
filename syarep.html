@@ -1,0 +1,149 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background-color: #cacaca;
+        }
+        .container {
+            background-color: #e5ddcb;
+            height: 100vh;
+            width: 90%;
+            margin: auto;
+        }
+        header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: #ffffff;
+        }
+        nav {
+            width: 100%;
+            position: relative;
+            /* background: #fff; */
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            line-height: 60px;
+            top: 0px;
+            padding: 0 20px;
+        }
+        nav .logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .nav-menu {
+            display: flex;
+            position: relative;
+            list-style: none;
+        }
+        .nav-menu .nav-item a{
+            height: 100%;
+            /* display: block; */
+            color: #222;
+            padding: 0 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .nav-menu .nav-item:hover a {
+            color: #e98c81;
+            /* background: #03c04a; */
+        }
+        /* .nav-menu .nav-item a i {
+            rotate: 0deg;
+            display: inline-block;
+            transition: .3s ease;
+        }
+        .nav-menu .nav-item:hover a i {
+            rotate: -180deg;
+        } */
+        .nav-menu .nav-item ul {
+            position: absolute;
+            list-style: none;
+            display: block;
+            padding-top: 10px;
+            height: 0;
+            overflow: hidden;
+            transition: .3s ease-in;
+        }
+        .nav-menu .nav-item:hover ul {
+            height: calc(400% + 10px);
+        }
+        .nav-menu .nav-item ul li a {
+            display: none;
+        }
+        .nav-menu .nav-item:hover ul li a {
+            display: block;
+            background: #fff;
+            color: #222;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .nav-menu .nav-item:hover ul li:hover a {
+            color: #e98c81;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="image/logo.avif" alt="">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="">Home <i class='bx bx-chevron-down'></i></a>
+                        <ul>
+                            <li><a href="#">Home - 1</a></li>
+                            <li><a href="#">Home - 2</a></li>
+                            <li><a href="#">Home - 3</a></li>
+                            <li><a href="#">Home - 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="">Shop</a></li>
+                    <li class="nav-item"><a href="">Product <i class='bx bx-chevron-down'></i></a>
+                        <ul>
+                            <li><a href="#">Simple Product</a></li>
+                            <li><a href="#">Variable Product</a></li>
+                            <li><a href="#">Countdown Product</a></li>
+                            <li><a href="#">Soldout Product</a></li>
+                            <li><a href="#">Affiliate Product</a></li>
+                            <li><a href="#">Product Preorder</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="">Blog</a></li>
+                    <li class="nav-item"><a href="">About</a></li>
+                    <li class="nav-item"><a href="">Contact</a></li>
+                </ul>
+                <div class="top-right">
+                    <a href="">Login</a>
+                    <a href="">Register</a>
+                    <a href="">USD</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
+>>>>>>> bbab1d238027861fe87d24eca3398d3cdf281d61
