@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fefefe;
+        }
+        .container {
+            background-color: #e5ddcb;
+            height: 200vh;
+            width: 100%;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(66, 66, 66, 0.267);
+        }
+        .container .top {
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e98c81;
+            width: 100%;
+            height: 50px;
+            font-family: "Poppins", sans-serif;
+            transition: .5s ease-in-out;
+        }
+        .container .top.close {
+            height: 0;
+            overflow: hidden;
+        }
+        .container .top .top1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 82%;
+        }
+        .container .top .top1 span {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .container .top .top1 a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            padding: 4px 20px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            transition: .3s;
+        }
+        .container .top .top1 a:hover{
+            color: #222;
+            border: 1px solid #222;
+        }
+        .container .top .top1 .top-btn {
+            cursor: pointer;
+            color: #222;
+            position: absolute;
+            right: 0;
+            padding: 5px 5px;
+            background: transparent;
+            border: none;
+            /* justify-self: end; */
+        }
+        .container .sosmed {
+            font-family: "Poppins", sans-serif;
+            background-color: #f0edee;
+            display: flex;
+            justify-content: center;
+            padding: 11px 0;
+        }
+        .container .sosmed .wrapper-sosmed {
+            width: 90%;display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-left {
+            display: flex;
+            gap: 15px;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-left span {
+            position: relative;
+            font-size: 14px;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-left span.mail-us:before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            height: 90%;
+            width: 1px;
+            background-color: #1b1b1c;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-left span p {
+            color: #1b1b1c;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-left span p a{
+            text-decoration: none;
+            color: #1b1b1c;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-right {
+            margin-right: 5px;
+            display: flex;
+            gap: 15px;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-right a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-right a i {
+            color: #1b1b1c;
+            transition: .3s;
+        }
+        .container .sosmed .wrapper-sosmed .sosmed-right a i:hover {
+            color: #e98c81;
+        }
+
+        header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgb(231, 231, 231);
+            font-family: "Poppins", sans-serif;
+            z-index: 999;
+        }
+        nav {
+            width: 90%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            line-height: 50px;
+            top: 0px;
+            padding: 0 20px;
+        }
+        nav .logo{
+            height: 100%;
+            width: 250px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-menu {
+            display: flex;
+            position: relative;
+            list-style: none;
+        }
+        .nav-menu .nav-item a{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: #222;
+            padding: 0 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .nav-menu .nav-item:hover a {
+            color: #e98c81;
+        }
+        .nav-menu .nav-item ul {
+            position: absolute;
+            list-style: none;
+            /* display: block; */
+            padding-top: 20px;
+            height: 0;
+            overflow: hidden;
+            transition: .3s ease-in;
+        }
+        .nav-menu .nav-item:hover ul {
+            height: 440%;
+            border-radius: 5px;
+        }
+        .nav-menu .nav-item ul li a {
+            display: none;
+        }
+        .nav-menu .nav-item:hover ul li {
+            width: 250px;
+            background: #fff;
+        }
+        .nav-menu .nav-item:hover ul li a {
+            display: block;
+            color: #222;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .nav-menu .nav-item:hover ul li:hover a {
+            color: #e98c81;
+        }
+
+        nav .top-right {
+            display: flex;
+            /* gap: 10px; */
+            align-items: center;
+        }
+        nav .top-right a{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            position: relative;
+            padding: 0 20px;
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+        nav .top-right #reg:hover{
+            color: #e98c81;
+        }
+        nav .top-right a.log:before {
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 2px;
+            background-color: #222;
+            right: 0;
+            top: 18px;
+        }
+        nav .top-right .shop{
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav .top-right .shop i {
+            font-size: 28px;
+        }
+        nav .top-right a i {
+            font-size: 10px;
+        }
+        .syarep-section{
+            font-family: "Oswald", sans-serif;
+        }
+        .syarep-section .nduwur{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .syarep-section .nduwur .isi{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+            justify-content: center;
+            margin-left: 90px;
+        }
+        .syarep-section .nduwur .isi span{
+            font-size: 36px;
+            font-weight: 400;
+            color: #1b1b1c;
+        }
+        .syarep-section .nduwur .isi h1{
+            font-size: 72px;
+            font-weight: 600;
+            color: #1b1b1c;
+        }
+        .syarep-section .nduwur .isi a{
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #1b1b1c;
+            border-radius: 30px;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 0.025em;
+        }
+        .syarep-section .nduwur .isi a:hover{
+            background-color: #e98c81;
+            transition: .3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top1">
+                <span>Get 35% off for new product</span>
+                <a href="#">Shop Now</a>
+                <button class="top-btn">X</button>
+            </div>
+        </div>
+        <div class="sosmed">
+            <div class="wrapper-sosmed">
+                <div class="sosmed-left">
+                    <span>
+                        <p>Phone: <a href="#">+0123456789</a></p>
+                    </span>
+                    <span class="mail-us">
+                        <p>Email: <a href="#">demo@example.com</a></p>
+                    </span>
+                </div>
+                <div class="sosmed-right">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-vimeo'></i></a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="image/logo.avif" alt="">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="">Home <i class='bx bx-chevron-down'></i></a>
+                        <ul>
+                            <li><a href="#">Home - 1</a></li>
+                            <li><a href="#">Home - 2</a></li>
+                            <li><a href="#">Home - 3</a></li>
+                            <li><a href="#">Home - 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="">Shop</a></li>
+                    <li class="nav-item"><a href="">Product <i class='bx bx-chevron-down'></i></a>
+                        <ul>
+                            <li><a href="#">Simple Product</a></li>
+                            <li><a href="#">Variable Product</a></li>
+                            <li><a href="#">Countdown Product</a></li>
+                            <li><a href="#">Soldout Product</a></li>
+                            <li><a href="#">Affiliate Product</a></li>
+                            <li><a href="#">Product Preorder</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="">Blog</a></li>
+                    <li class="nav-item"><a href="">About</a></li>
+                    <li class="nav-item"><a href="">Contact</a></li>
+                </ul>
+                <div class="top-right">
+                    <a href="" class="log" id="reg">Login</a>
+                    <a href="" id="reg">Register</a>
+                    <a href="">USD <i class='bx bxs-down-arrow' ></i></a>
+                    <a href="" class="shop">
+                        <i class='bx bx-shopping-bag'></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section class="syarep-section">
+            <div class="nduwur">
+                <img src="image/home-1-slider-1_2edf7037-ceb3-4834-a961-6c486641d0d7.webp" alt="">
+                <div class="isi">
+                    <div class="teks">
+                        <span>Healthy life with</span>
+                        <h1>Natural Organic</h1>
+                    </div>
+                    <div class="btn">
+                        <a href="">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        const closeBtn = document.querySelector('.top-btn')
+        const closeTop = document.querySelector('.top')
+
+        closeBtn.onclick = function () {
+            closeTop.classList.toggle('close')
+        }
+    </script>
+</body>
+</html>
