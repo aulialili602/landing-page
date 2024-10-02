@@ -14,20 +14,20 @@
 <style>
     .container{
        background-color: rgb(236, 230, 230);
-       height: 600px;
+       height: 500px;
        width: 100%;
     }
     .kiri img{
-        width: 500px;
-        height: 420px;
-        margin-top: 95px;
-        margin-left: 80px;
+        width: 610px;
+        height: 450px;
+        margin-left: 40px;
+        margin-top: 20px;
     }
     .kanan {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 500px;
+        margin-left: 530px;
         margin-top: -100px;
     }
     .kanan h1{
@@ -35,76 +35,70 @@
         justify-content: right;
         margin-top: -300px;
         font-family: "Oswald", sans-serif;
-        margin-bottom: -10px;
-        font-size: 36px;
+        margin-bottom: -12px;
+        font-size: 22px;
+        gap: 5px;
+        color: rgb(20, 20, 20);
     }
     .kanan h2{
         display: flex;
         justify-content: right;
         font-family: "Oswald", sans-serif;
-        font-size: 30px;
+        font-size: 33px;
+        text-align: center;
+        color: rgb(20, 20, 20);
     }
-    .btn2{
+    .kanan p{
+        display: flex;
+        justify-content: right;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        margin-top: -19px;
+        text-align: center;
+    }
+    .red {
+        color: #E98C81;
+    }
+    .inpt {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    .inpt1 {
+        border-radius: 40px;
+        padding: 6px 45px;
+        background-color: rgb(236, 230, 230);
+        font-size: 18px;
+        border: 1px solid;
+        font-family: "Poppins", sans-serif;
+    }
+    .inpt2 {
     background-color: #E98C81;
     color: white;
-    padding: 8px 33px;
-    font-size: 20px;
+    padding: 12px 35px;
+    font-size: 18px;
     border: none;
     border-radius: 30px;
-    margin-top: 10px;
+    margin-left: -60px;
+    text-align: start;
     font-family: "Oswald", sans-serif;
-    display: flex;
-    }
-    .time {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    }
-    .time2 {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-    }
-    .time2 h2{
-        font-size: 35px;
-        font-family: "Poppins", sans-serif;
-        color: rgb(59, 58, 58);
-    }
-    .time2 h3{
-        font-size: 25px;
-        margin-top: -30px;
-        font-family: "Oswald", sans-serif;
     }
 </style>
 <body>
     <div class="container">
         <div class="kiri">
-            <img src="image/flashdeals.webp">
+            <img src="image/special-removebg-preview.png">
         </div>
         <div class="kanan">
-            <h1>FLASH DEALS</h1>
-            <h2>HURRY UP AND GET 25% DISCOUNT</h2>
-            <div class="btn">
-            <button class="btn2">SHOP NOW</button>
+            <h1>SPECIAL<div class="red">OFFER</div>FOR SUBSCRIPTION</h1>
+            <h2>GET INSTANT DISCOUNT FOR<br> MEMBERSHIP</h2>
+            <p>Subscribe our newsletter and all latest news of our<br>
+                latest product, promotion and offers</p>
+
+            <div class="inpt">
+                <input class="inpt1" placeholder="email@example.com">
+                <input class="inpt2" type="button" value="SUBSCRIBE">
             </div>
-            <div class="time">
-                <div class="time2">
-                    <h2>00</h2>
-                    <h3>Days</h3>
-                </div>
-                <div class="time2">
-                    <h2>00</h2>
-                    <h3>Hours</h3>
-                </div>
-                <div class="time2">
-                    <h2>00</h2>
-                    <h3>Minutes</h3>
-                </div>
-                <div class="time2">
-                    <h2>00</h2>
-                    <h3>Seconds</h3>
-                </div>
             </div>
         </div>
     </div>
