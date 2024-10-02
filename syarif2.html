@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #a8a8a8;
+        }
+        .syarep2 {
+            width: 100%;
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+        .syarep2 .wrapper-img {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 0 30px;
+        }
+        .syarep2 .wrapper-img .img-hover {
+            position: relative;
+            overflow: hidden;
+            width: 375px;
+            height: 261.17px;
+        }
+        .syarep2 .wrapper-img .img-hover img {
+            transition: .4s ease;
+            width: 100%
+        }
+        .syarep2 .wrapper-img .img-hover:hover img {
+            transform: scale(110%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="syarep2">
+            <div class="wrapper-img">
+                <div class="img-hover">
+                    <img src="image/small-banner-1.webp" alt="">
+                </div>
+                <div class="img-hover">
+                    <img src="image/small-banner-2.webp" alt="">
+                </div>
+                <div class="img-hover">
+                    <img src="image/small-banner-3.webp" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
