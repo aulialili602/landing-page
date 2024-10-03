@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section-4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #080808;
+        }
+        .container {
+            width: 100%;
+        }
+        .section-4 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+        .section-4 .subjudul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            margin-bottom: 50px;
+        }
+        .section-4 .subjudul h3 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 19px;
+            font-family: "Oswald", sans-serif;
+        }
+        .section-4 .subjudul p {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+        .section-4 .wrap {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+        }
+        .section-4 .wrap .card {
+            position: relative;
+            width: 250px;
+            height: 340px;
+            background-color: #efedee;
+            transition: .4s ease;
+            margin-bottom: 80px;
+        }
+        .section-4 .wrap .card:hover {
+            box-shadow: 2px 4px 20px rgb(226, 226, 226);
+        }
+        .section-4 .wrap .card img {
+            position: absolute;
+            width: 250px;
+        }
+        .section-4 .wrap .card img.dua {
+            opacity: 0;
+            transition: .4s ease;
+        }
+        .section-4 .wrap .card:hover img.dua {
+            opacity: 100%;
+        }
+        .section-4 .wrap .card .content {
+            position: absolute;
+            margin: 0 20px;
+            top: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .section-4 .wrap .card .content .nama-produk {
+            font-family: "Oswald", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+        .section-4 .wrap .card .content .nama-produk:hover {
+            color: #e98c81;
+        }
+        .section-4 .wrap .card .content .harga-produk {
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            gap: 10px;
+            transition: .2s ease;
+        }
+        .section-4 .wrap .card:hover .content .harga-produk {
+            opacity: 0;
+        }
+        .section-4 .wrap .card .content .harga-produk .coret {
+            font-weight: 400;
+        }
+        .section-4 .wrap .card .content .detail-produk {
+            transform: translateY(-40px);
+            font-size: 25px;
+            font-weight: 300;
+            width: 0;
+            overflow: hidden;
+            transition: .4s ease;
+            display: flex;
+            gap: 10px;
+        }
+        .section-4 .wrap .card:hover .content .detail-produk {
+            width: 100%;
+        }
+        .section-4 .wrap .card .content .detail-produk a {
+            color: black;
+        }
+        .section-4 .wrap .card .content .detail-produk a:hover {
+            color: #e98c81;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section-4">
+            <div class="subjudul">
+                <h3>BEST SALE</h3>
+                <p>All best seller product are now available for you and your can buy this product from here any time any where so sop now</p>
+            </div>
+            <div class="wrap">
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/bawang.webp" alt="sayur">
+                    <img class="dua" src="image/gataunamanya.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/delima.webp" alt="sayur">
+                    <img class="dua" src="image/cabe.png" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

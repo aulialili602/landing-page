@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
     <style>
         * {
             margin: 0;
@@ -27,6 +28,7 @@
             width: 100%;
             margin: auto;
             box-shadow: 0 0 20px rgba(66, 66, 66, 0.267);
+            overflow-x: hidden;
         }
         .container .top {
             /* border: 1px solid black; */
@@ -325,6 +327,485 @@
             height: 380px;
             margin-top: 70px;
         }
+        .section-4 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+        .section-4 .subjudul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 35%;
+            margin-bottom: 50px;
+        }
+        .section-4 .subjudul h3 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 19px;
+            font-family: "Oswald", sans-serif;
+        }
+        .section-4 .subjudul p {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+        .section-4 .wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 85%;
+        }
+        .section-4 .wrap .card {
+            position: relative;
+            width: 250px;
+            height: 340px;
+            background-color: #efedee;
+            transition: .4s ease;
+            margin-bottom: 80px;
+        }
+        .section-4 .wrap .card:hover {
+            box-shadow: 2px 4px 20px rgb(226, 226, 226);
+        }
+        .section-4 .wrap .card img {
+            position: absolute;
+            width: 250px;
+        }
+        .section-4 .wrap .card img.dua {
+            opacity: 0;
+            transition: .4s ease;
+        }
+        .section-4 .wrap .card:hover img.dua {
+            opacity: 100%;
+        }
+        .section-4 .wrap .card .content {
+            position: absolute;
+            margin: 0 20px;
+            top: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .section-4 .wrap .card .content .nama-produk {
+            font-family: "Oswald", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+        .section-4 .wrap .card .content .nama-produk:hover {
+            color: #e98c81;
+        }
+        .section-4 .wrap .card .content .harga-produk {
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            gap: 10px;
+            transition: .2s ease;
+        }
+        .section-4 .wrap .card:hover .content .harga-produk {
+            opacity: 0;
+        }
+        .section-4 .wrap .card .content .harga-produk .coret {
+            font-weight: 400;
+        }
+        .section-4 .wrap .card .content .detail-produk {
+            transform: translateY(-40px);
+            font-size: 25px;
+            font-weight: 300;
+            width: 0;
+            overflow: hidden;
+            transition: .4s ease;
+            display: flex;
+            gap: 10px;
+        }
+        .section-4 .wrap .card:hover .content .detail-produk {
+            width: 100%;
+        }
+        .section-4 .wrap .card .content .detail-produk a {
+            color: black;
+        }
+        .section-4 .wrap .card .content .detail-produk a:hover {
+            color: #e98c81;
+        }
+        /* SECTION-5 */
+        .section-5{
+            background-color: rgb(236, 230, 230);
+            height: 600px;
+            width: 100%;
+        }
+        .kiri img{
+            width: 500px;
+            height: 420px;
+            margin-top: 95px;
+            margin-left: 80px;
+        }
+        .kanan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 500px;
+            margin-top: -100px;
+        }
+        .kanan h1{
+            display: flex;
+            justify-content: right;
+            margin-top: -300px;
+            font-family: "Oswald", sans-serif;
+            margin-bottom: -10px;
+            font-size: 36px;
+        }
+        .kanan h2{
+            display: flex;
+            justify-content: right;
+            font-family: "Oswald", sans-serif;
+            font-size: 30px;
+        }
+        .btn2{
+        background-color: #E98C81;
+        color: white;
+        padding: 8px 33px;
+        font-size: 20px;
+        border: none;
+        border-radius: 30px;
+        margin-top: 10px;
+        font-family: "Oswald", sans-serif;
+        display: flex;
+        }
+        .time {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+        }
+        .time2 {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 20px;
+        }
+        .time2 h2{
+            font-size: 35px;
+            font-family: "Poppins", sans-serif;
+            color: rgb(59, 58, 58);
+        }
+        .time2 h3{
+            font-size: 25px;
+            margin-top: -30px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        /* SECTION-6 */
+        .syarep2 {
+            width: 100%;
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+        .syarep2 .wrapper-img {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 30px;
+        }
+        .syarep2 .wrapper-img .img-hover {
+            position: relative;
+            overflow: hidden;
+            width: 375px;
+            height: 261.17px;
+        }
+        .syarep2 .wrapper-img .img-hover img {
+            transition: .4s ease;
+            width: 100%
+        }
+        .syarep2 .wrapper-img .img-hover:hover img {
+            transform: scale(110%);
+        }
+
+        /* SECTION-8 */
+        .section-8{
+            background-color: rgb(236, 230, 230);
+            height: 500px;
+            width: 100%;
+        }
+        .section-8 .kiri img{
+            width: 610px;
+            height: 450px;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .section-8 .kanan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-left: 530px;
+            margin-top: -100px;
+        }
+        .section-8 .kanan h1{
+            display: flex;
+            justify-content: right;
+            margin-top: -300px;
+            font-family: "Oswald", sans-serif;
+            margin-bottom: -12px;
+            font-size: 22px;
+            gap: 5px;
+            color: rgb(20, 20, 20);
+        }
+        .section-8 .kanan h2{
+            display: flex;
+            justify-content: right;
+            font-family: "Oswald", sans-serif;
+            font-size: 33px;
+            text-align: center;
+            color: rgb(20, 20, 20);
+        }
+        .section-8 .kanan p{
+            display: flex;
+            justify-content: right;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            margin-top: -19px;
+            text-align: center;
+        }
+        .section-8 .red {
+            color: #E98C81;
+        }
+        .section-8 .inpt {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        .section-8 .inpt1 {
+            border-radius: 40px;
+            padding: 6px 45px;
+            background-color: rgb(236, 230, 230);
+            font-size: 18px;
+            border: 1px solid;
+            font-family: "Poppins", sans-serif;
+        }
+        .section-8 .inpt2 {
+            background-color: #E98C81;
+            color: white;
+            padding: 12px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            margin-left: -60px;
+            text-align: start;
+            font-family: "Oswald", sans-serif;
+        }
+        .section-8 .inpt2:active {
+            background-color: #e25141;
+        }
+        /* SECTION-9 */
+        .section-9 {
+            background-color: rgb(250, 248, 246);
+            width: 100%;
+            height: 680px;
+        }
+        .tulisan-atas{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Oswald", sans-serif;
+            padding-top: 50px;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .tulisan-atas p {
+            font-family: "Nunito", sans-serif;
+            margin-top: -10px;
+            font-size: 18px;
+        }
+        .gambarjejer {
+            display: flex;
+            flex-direction: row;
+            margin: 0px 90px;
+            height: 240px;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .kotaknomor {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-direction: row;
+            font-family: "Oswald", sans-serif;
+            margin-top: 10px;
+            margin-right: 255px;
+        }
+        .nomor1 {
+            border: 1px solid grey;
+            border-radius: 5px;
+            width: 40px;
+            margin-left: -85px;
+        }
+        .nomor2 {
+            border: 1px solid grey;
+            border-radius: 5px;
+            width: 40px;
+        }
+        .nomor3 {
+            border: 1px solid grey;
+            border-radius: 5px;
+            width: 40px;
+            margin-right: -5px;
+        }
+        .deskripsi {
+            display: flex;
+            justify-content: left;
+            margin-left: 140px;
+            align-items: center;
+            gap: 35px;
+            margin-top: -85px;
+        }
+        .info {
+            width: 345px;
+        }
+        .info-span {
+            font-family: "Teko", sans-serif;
+            font-size: 18px;
+        }
+        .info-h2 {
+            font-family: "Oswald", sans-serif;
+            font-size: 21px;
+            margin-top: -1px;
+            transition: .3s;
+        }
+        .info-h2:hover {
+            color:pink;
+        }
+        .info-p {
+            font-family: "Roboto Mono", monospace;
+            font-size: 15px;
+            margin-top: -5px;
+        }
+/* SECTION-10 */
+        .section-10{
+            background-color: rgb(236, 230, 230);
+            height: 150px;
+            width: 100%;
+        }
+        .kelompok {
+            display: flex;
+            justify-content: space-between;
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            gap: 5px;
+            color: black;
+            margin-left: 50px;
+        }
+        .header h1{
+            font-size: 33px;
+            font-family: "Oswald", sans-serif;
+        }
+        .header p{
+            font-family: "Poppins", sans-serif;
+        }
+        .btn2{
+            background-color: #E98C81;
+            color: white;
+            padding: 8px 36px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            margin-top: 60px;
+            margin-right: 90px;
+            font-family: "Oswald", sans-serif;
+        }
+        .btn2:hover{
+            color: black;
+            background-color: rgb(189, 176, 176);
+        }
+
+/* FOOTER */
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0;
+            background-color: #1a1a1a;
+        }
+        .footer-column {
+            max-width: 200px;
+        }
+        .footer-column img{   
+            margin-bottom: 20px;
+        }
+        .footer-column p, .footer-column a {
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 1.6;
+            font-family: "Poppins", sans-serif;
+        }
+            .footer h3{
+            font-size: 24px;
+            font-family: "Oswald", sans-serif;
+            text-decoration-line: underline;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: none;
+            color:#e98c81;
+            padding-left: 5px;
+            transition: 0.4s;
+           -webkit-transition: 0.4s;
+        }
+        .footer-column .social-icons {
+            margin-top: 20px;
+        }
+        .footer-column .social-icons a {
+            color: #ffffff;
+            display:inline-block ;
+            font-size: 15px;
+            border: 1px solid #ffffff;
+            border-radius: 50%; 
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 3px;  
+            background-color: transparent; 
+        }
+        .social-icons a:hover{
+            color: #e98c81;
+            border: 1px solid #e98c81;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #000000;
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+        }
+        .footer-bottom a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            text-decoration: none;
+        }
+        ul{
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+        }
+        .footer h3 {
+            color: #fff;
+        }
+        .footer-bottom {
+            color: #fff;
+        }
 
     </style>
 </head>
@@ -428,6 +909,396 @@
                 <img src="image/allvegetable.webp" alt="">
             </div>
         </section>
+        <section class="section-4">
+            <div class="subjudul">
+                <h3>BEST SALE</h3>
+                <p>All best seller product are now available for you and your can buy this product from here any time any where so sop now</p>
+            </div>
+            <div class="wrap">
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/bawang.webp" alt="sayur">
+                    <img class="dua" src="image/gataunamanya.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/delima.webp" alt="sayur">
+                    <img class="dua" src="image/cabe.png" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-5">
+                <div class="kiri">
+                    <img src="image/flashdeals.webp">
+                </div>
+                <div class="kanan">
+                    <h1>FLASH DEALS</h1>
+                    <h2>HURRY UP AND GET 25% DISCOUNT</h2>
+                    <div class="btn">
+                    <button class="btn2">SHOP NOW</button>
+                    </div>
+                    <div class="time">
+                        <div class="time2">
+                            <h2>00</h2>
+                            <h3>Days</h3>
+                        </div>
+                        <div class="time2">
+                            <h2>00</h2>
+                            <h3>Hours</h3>
+                        </div>
+                        <div class="time2">
+                            <h2>00</h2>
+                            <h3>Minutes</h3>
+                        </div>
+                        <div class="time2">
+                            <h2>00</h2>
+                            <h3>Seconds</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="syarep2">
+            <div class="wrapper-img">
+                <div class="img-hover">
+                    <img src="image/small-banner-1.webp" alt="">
+                </div>
+                <div class="img-hover">
+                    <img src="image/small-banner-2.webp" alt="">
+                </div>
+                <div class="img-hover">
+                    <img src="image/small-banner-3.webp" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-4">
+            <div class="subjudul">
+                <h3>BEST SALE</h3>
+                <p>All best seller product are now available for you and your can buy this product from here any time any where so sop now</p>
+            </div>
+            <div class="wrap">
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/bawang.webp" alt="sayur">
+                    <img class="dua" src="image/gataunamanya.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/delima.webp" alt="sayur">
+                    <img class="dua" src="image/cabe.png" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/bawang.webp" alt="sayur">
+                    <img class="dua" src="image/gataunamanya.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/delima.webp" alt="sayur">
+                    <img class="dua" src="image/cabe.png" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="image/gataunamanya.webp" alt="sayur">
+                    <img class="dua" src="image/delima.webp" alt="buah-delima">
+                    <div class="content">
+                        <span class="nama-produk">Preorder product</span>
+                        <div class="harga-produk">
+                            <span>$19.00</span>
+                            <span class="coret" style="text-decoration: line-through;">$29.00</span>
+                        </div>
+                        <div class="detail-produk">
+                            <a href=""><i class='bx bx-shopping-bag'></i></a>
+                            <a href=""><i class='bx bx-heart' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-8">
+            <div class="kiri">
+                <img src="image/special-removebg-preview.png">
+            </div>
+            <div class="kanan">
+                <h1>SPECIAL<div class="red">OFFER</div>FOR SUBSCRIPTION</h1>
+                <h2>GET INSTANT DISCOUNT FOR<br> MEMBERSHIP</h2>
+                <p>Subscribe our newsletter and all latest news of our<br>
+                    latest product, promotion and offers</p>
+    
+                <div class="inpt">
+                    <input class="inpt1" placeholder="email@example.com">
+                    <button class="inpt2">SUBSCRIBE</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-9">
+            <div class="tulisan-atas">
+                <h1>Latest Blog</h1>
+                <p>If you want to know about the organic product then keep an eye on our blog.</p>
+            </div>
+            <div class="gambarjejer">
+                <img src="image/stroberry.webp">
+                <img src="image/almond.webp">
+                <img src="image/3buah.webp">
+            </div>
+            <div class="kotaknomor">
+                <div class="nomor1">
+                    <h3>14<br>10</h3>
+                </div>
+                <div class="nomor2">
+                    <h3>14<br>10</h3>
+                </div>
+                <div class="nomor3">
+                    <h3>14<br>10</h3>
+                </div>
+            </div>
+            <div class="deskripsi">
+                <div class="info">
+                    <span class="info-span">Author: Obrien Demo Admin | Comments: 1</span>
+                    <h2 class="info-h2">There are many variations of passages of lorem ipsum available</h2>
+                    <p class="info-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                    roots in a piece of classical Latin literature from 45 BC, making...</p>
+                </div>
+                <div class="info" style="margin-left: 10px;">
+                    <span class="info-span">Author: Obrien Demo Admin</span>
+                    <h2 class="info-h2">There are many variations of passages of lorem ipsum available</h2>
+                    <p class="info-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                        roots in a piece of classical Latin literature from 45 BC, making...</p>
+                    </div>
+                <div class="info" style="margin-left: 5px;">
+                    <span class="info-span">Author: Obrien Demo Admin</span>
+                    <h2 class="info-h2">The standard chunk of lorem ipsum used since</h2>
+                    <p class="info-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                        roots in a piece of classical Latin literature from 45 BC, making...</p>
+                </div>
+            </div> 
+        </div>
+
+        <div class="section-10">
+            <div class="kelompok">
+            <div class="header">
+                <h1>Need Help ?</h1>
+                <p>Call our support 24/7 at 01234-567-890</p>
+            </div>
+            <div class="btn">
+                <button class="btn2">CONTACT NOW</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-column">
+            <img alt="Logo" src="image/logo.avif">
+            <p>
+            Lukas is the best parts shop for your car accessories. What kind of parts do you need you can get here soluta nobis
+            </p>
+            <div class="social-icons">
+                <a href="#">
+                <i class="fab fa-facebook-f">
+                </i>
+                </a>
+                <a href="#">
+                <i class="fab fa-twitter">
+                </i>
+                </a>
+                <a href="#">
+                <i class="fab fa-linkedin-in">
+                </i>
+                </a>
+                <a href="#">
+                <i class="fab fa-youtube">
+                </i>
+                </a>
+                <a href="#">
+                <i class="fab fa-vimeo-v">
+                </i>
+                </a>
+            </div>
+            </div>
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Our company</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Why We?</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quicklink</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Contact</a></li>    
+                </ul>
+                </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Online Support</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Store Information</h3>
+                <p>123, H2, Road #21, Main City, Your address goes here.</p>
+                <p>Phone: 01254 698 785, 36598 254 987</p>
+                <p>Email: demo@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2022
+                <a href="#">HasThemes</a>
+                | Built with
+                <a href="#">OBrien</a>
+                by
+                <a href="#">HasThemes</a>.
+            </p>
+        </div>
         
     </div>
     <script>
